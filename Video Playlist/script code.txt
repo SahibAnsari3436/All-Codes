@@ -1,0 +1,28 @@
+<script>
+    let currentIndex = 0;
+    const thumbnailsWrapper = document.querySelector('.thumbnails-wrapper');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainVideo = document.getElementById('main-video');
+
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            const videoSrc = thumbnail.getAttribute('data-video');
+            mainVideo.src = videoSrc;
+            currentIndex = index;
+        });
+    });
+
+    function moveLeft() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            thumbnailsWrapper.scrollLeft -= thumbnails[currentIndex].offsetWidth + 20; // 20 is the margin between thumbnails
+        }
+    }
+
+    function moveRight() {
+        if (currentIndex < thumbnails.length - 4) {
+            currentIndex++;
+            thumbnailsWrapper.scrollLeft += thumbnails[currentIndex].offsetWidth + 20;
+        }
+    }
+</script>

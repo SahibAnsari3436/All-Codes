@@ -1,0 +1,7 @@
+// this code use for Comment form title tag change
+
+function wpdocs_comment_form_defaults( $defaults ) {
+    $defaults['title_reply_before'] = __( '<p id="reply-title" class="comment-reply-title">' );
+    return $defaults;
+  }
+  add_filter( 'comment_form_defaults', 'wpdocs_comment_form_defaults' );

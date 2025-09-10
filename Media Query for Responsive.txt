@@ -1,0 +1,52 @@
+#mbf-chfl{
+    border: none;
+}
+
+#mbf-org{
+ width: 780px;   
+}
+
+#mbf-nef{
+width: 780px;
+}
+
+#mbf-bsw{
+  width: 100%;  
+}
+
+#mbf-btn{
+    color: #000 !important;
+}
+
+
+
+
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+           #mbf-org{
+ width: 650px;   
+}
+
+#mbf-nef{
+width: 650px;
+}  
+        }
+
+
+@media only screen and (max-width:600px){
+    
+     #mbf-org{
+ width: 100%;   
+}
+
+#mbf-nef{
+width: 100%;
+}
+
+}
+
+
+
+
+

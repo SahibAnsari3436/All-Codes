@@ -1,0 +1,43 @@
+Newslatter Forms
+
+Email Subject:
+
+Newsletter Subscription
+
+Success Message: 
+
+Thank you for subscribing to our newsletter! 
+
+Admin Note :
+
+This is to notify you that a new user has subscribed to the newsletter on our website.
+
+-----------------------------------------------------------------------
+Contact Form
+
+
+Admin Note :
+
+Hi Ursula M. John,
+
+You got a new inquiry from your website, Have a look the below details:
+
+Confirmation Message: 
+
+Hello [first-name][last-name],
+
+Thank you for your interest. Our team will get back to you as soon as possible.
+
+Ursula M. John
+
+
+
+Kap Westling (Live Ready)
+HT Building  Products (Live Ready)
+Author site (Live Ready)
+Red Lentils
+Cupcake
+uirequest
+Kristy beke new landing page
+Analog Power
+

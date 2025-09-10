@@ -1,0 +1,66 @@
+Sticky Header on Top and Header should be made by Elementskits
+
+
+
+<style>
+.elementor .elementor-element.sticky{
+    background: #FFFFFF;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 20%);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 9;
+}
+.admin-bar .elementor .elementor-element.sticky{
+    top: 32px;
+}
+.elementor .sticky .elementor-element .elementskit-navbar-nav > li > a, .elementor .sticky .elementor-element .elementor-social-icon i, .elementor .sticky .elementor-element .elementskit-menu-hamburger > .ekit-menu-icon{
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+.ekit-template-content-header .elementor-widget-image, .elementor-location-header .elementor-widget-image{
+    margin-bottom: 0;
+}
+.ekit-template-content-header .sticky .elementor-widget-image, .elementor-location-header .sticky .elementor-widget-image{
+    transform: scale(0.9);
+    height: auto;
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 1024px) {
+.admin-bar .elementskit-navbar-nav-default.elementskit-menu-offcanvas-elements{
+    top: 32px;
+}
+}
+@media only screen and (max-width: 782px) {
+.admin-bar .elementor .elementor-element.sticky, .admin-bar .elementskit-navbar-nav-default.elementskit-menu-offcanvas-elements{
+    top: 46px;
+}
+}
+@media only screen and (max-width: 600px) {
+.admin-bar .elementor .elementor-element.sticky, .admin-bar .elementskit-navbar-nav-default.elementskit-menu-offcanvas-elements{
+    top: 0;
+}
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+	    
+$(window).on('load scroll', function(){
+	var scroll = 100,
+	sticky = $('.ekit-template-content-header, .elementor-location-header').find('.elementor-section')
+
+	if ($(window).scrollTop() >= scroll) sticky.addClass('sticky')
+	else sticky.removeClass('sticky')
+})
+		
+})
+}(jQuery))
+</script>

@@ -1,0 +1,81 @@
+.overlay {
+    padding: 5px;
+}
+
+.elementor-2573 .elementor-element.elementor-element-e6da11e .eael-product-grid .woocommerce ul.products li.product {
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,.26)!important;
+}
+
+img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+    background-color: #fff;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #595959;
+}
+
+h2.woocommerce-loop-product__title {
+    padding: 0px 10px 0px 10px !important;
+}
+
+
+/* cart */
+
+form.woocommerce-cart-form {
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,.26)!important;
+}
+
+.cart_totals.calculated_shipping {
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,.26)!important;
+}
+
+/* checkout */
+div#order_review {
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,.26)!important;
+    padding: 18px !important;
+}
+
+/* related product */
+ul.woo-entry-inner.clr {
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,.26)!important;
+	padding: 5px;
+}
+
+img.woo-entry-image-main {
+	border: 2px solid;
+}
+
+.woocommerce ul.products li.product li.title a {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.woocommerce ul.products li.product .price {
+    font-size: 14px;
+	font-weight: 700;
+}
+
+li.category {
+    display: none !important;
+}
+
+/* account page styling */
+.woocommerce-MyAccount-tabs {
+    width: 20% !important;
+    margin-right: 4% !important;
+    padding: 15px !important;
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,.26)!important;
+}
+
+/* cart popup */
+.woocommerce ul.product_list_widget {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0px 0px 5px;
+}
+
+/* stay connected with us */
+.mc4wp-form-fields input[type="submit"] {
+    width: 100%;
+}
+.mc4wp-form-fields input[type="email"] {
+	color:#e9e9e9 }

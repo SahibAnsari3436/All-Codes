@@ -1,0 +1,62 @@
+
+
+
+    Contact From 7 Code For 2 Column inline
+  
+
+/*--- 2 Column Form Styles Start ---*/
+
+<div class="clearfix">
+     <div id="left">
+         First name [text first-name] <br/>
+         Last Name [text last-name] <br/>
+         How Did You Find Us ?
+     </div>
+     <div  id="right">
+         Email [email* your-email] <br/>
+         Phone [text* your-phone]
+     </div>
+</div>
+
+Subject [text* your-subject] <br/>
+Message [textarea* your-message] <br/>
+[submit "send"]
+
+
+/*--- 2 Column Form Styles End ---*/
+
+
+
+
+------------------------------------------- CSS
+
+/*--- 2 Column Form Styles Start ---*/
+
+#left {
+    width: 47%;
+    float: left;
+    margin-right:6%;
+}
+ 
+#right {
+    width: 47%;
+    float: left;
+}
+ 
+.clearfix:after {
+    content:"\0020";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+ 
+.clearfix {
+    display:block;
+}
+
+/*--- 2 Column Form Styles End ---*/
+
+------------------------------------------- CSS

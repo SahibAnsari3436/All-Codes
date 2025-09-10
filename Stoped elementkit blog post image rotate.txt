@@ -1,0 +1,10 @@
+
+
+
+
+.ekit-wid-con .elementskit-post-image-card:hover .elementskit-entry-thumb>img {
+    -webkit-transform: scale(1) rotate(0deg) !important;
+    transform: scale(1) rotate(0deg) !important;
+    opacity: .8;
+
+}

@@ -1,0 +1,272 @@
+
+ Contact Form 7 For Forouzan insurance--------
+
+
+
+[text first-heading id:Form-heading "Insured Information"]
+
+<div class="clearfix">
+     <div id="left">
+         [text* insured-name id:req-f7-poli-insured placeholder "Name of Insured*"] <br/>
+         [email* your-email id:req-f7-poli-email placeholder "Email*"] <br/>
+         [text* policy-number id:req-f7-poli-num placeholder "Policy Number*"] <br/>
+
+         [text second-heading id:Form-heading "Certificate Holder"]
+
+     </div>
+     <div  id="right">
+         [text* your-name id:req-f7-poli-name placeholder "Your Name*"] <br/>
+         [text* your-phone placeholder "Phone*"]
+     </div>
+</div>
+
+<div class="clearfix">
+     <div id="left">
+         [text* holder-name placeholder "Name of Certificate Holder/Additional Insured*"] <br/>
+         [email* holder-email id:req-f7-poli-hl-email placeholder "Email*"] <br/>
+     </div>
+     <div  id="right">
+         [text* your-attention id:req-f7-poli-attention placeholder "Attention to*"] <br/>
+         [text* holder-phone placeholder "Phone*"]
+     </div>
+</div>
+
+<div class="clearfix">
+     <div id="left">
+         [text* holder-Address placeholder "Address*"] <br/>
+     </div>
+     <div  id="right">
+         <div id="right-1">
+            [text* your-city placeholder "City*"]
+         </div>
+
+         <div id="right-2">
+            [text* your-state placeholder "State*"]
+         </div>
+
+         <div id="right-3">
+            [text* your-zip-code placeholder "Zip Code*"]
+         </div>
+     </div>
+</div>
+
+[text third-heading id:Form-third-heading "Type of Certificate Needed"]
+[text third-sub-heading id:Form-sub-heading "Please select all that apply."]
+
+<div class="clearfix">
+     <div id="checkbox-left">
+     [checkbox* checkbox-702 id:check-box use_label_element "Proof of Insurance" "Additional Insured" "Loss Payee Mortgage" "Other Required Wording"]<br/>
+     </div>
+</div>
+
+[text forth-heading id:Form-third-heading "Required Wording."]
+[text forth-sub-heading id:Form-sub-heading "Please select all that apply."]
+
+<div class="clearfix">
+     <div id="checkbox-left">
+     [checkbox* checkbox-957 id:check-box use_label_element "Primary Wording" "Waiver of Subrogation" "Residential" "Commercial" "Other Wording"]<br/>
+     
+     </div>
+</div>
+
+[text fifth-heading id:Form-heading "Additional Information"]
+     [textarea your-message id:text-box placeholder "Special Instruction of Requests"] <br/>
+<p class="con-text">Please upload any documents relating to the certificates requested (i.e. bank notices, etc.) here</p>
+[file upload-file id:file-upload limit:1000000]<br/>
+[submit "Submit"]
+
+
+
+---------------------------------------------------------------------------------------*
+
+
+ -----------------------------CSS Start*
+
+
+ 
+#left {
+    width: 47% !important;
+    float: left;
+    margin-right:6%;
+}
+ 
+#right {
+    width: 47%;
+    float: left;
+}
+
+#right-1 {
+    width: 28%;
+    float: left;
+	   margin-right:20px;
+}
+
+#right-2 {
+    width: 28%;
+    float: left;
+	margin-right:20px;
+}
+ 
+#right-3 {
+    width: 32%;
+    float: left;
+}
+.clearfix:after {
+    content:"\0020";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+ 
+.clearfix {
+    display:block;
+}
+
+
+#checkbox-left {
+	width: 100% !important;
+    float: left;
+    margin-right:6%;
+}
+
+.ekit-wid-con .ekit-form form label span{
+	display: inline !important;
+}
+
+#Form-heading{
+ pointer-events: none;
+	border: none;
+	margin-left:-30px;
+}
+
+#Form-third-heading{
+	pointer-events: none;
+	border: none;
+	margin-left:-30px;
+}
+
+#Form-sub-heading{
+	pointer-events: none;
+	border: none;
+	margin-left:-30px;
+	margin-top: -40px;
+	background-color: #FFFFFF00;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.elementor-1813 .elementor-element.elementor-element-9b39255 .ekit-form form label span {
+    color: #000000;
+	font-family: lora;
+	font-weight: 500;
+}
+
+#text-box{
+ border-top-width: 1px;
+ border-left-width: 1px;
+ border-right-width: 1px;
+	padding:20px;
+}
+
+#file-upload {
+	border: none;
+	margin-left:-30px;
+}
+
+#file-box{
+ border-top-width: 1px;
+ border-left-width: 1px;
+ border-right-width: 1px;
+	padding:20px;
+	height: 80px;
+}
+
+.con-text{
+	text-align: left;
+    font-size: 13px;
+    font-family: 'Lora' !important;
+    font-weight: 600;
+    color: #000;
+}
+
+
+-------------------------------- CSS End--------------------------------------
+
+
+-------------------------------- CSS Start For Mobile-------------------------
+
+
+ @media only screen and (max-width: 768px) {
+	
+	/*--- 2 Column Form Styles Start ---*/
+
+#left {
+    width: 100% !important;
+    float: left;
+    margin-right:6%;
+}
+ 
+#right {
+    width: 100%;
+    float: left;
+}
+
+#right-1 {
+    width: 100%;
+    float: left;
+	   margin-right:20px;
+	   margin-bottom: 8px;
+	  margin-top:-12px
+}
+
+#right-2 {
+    width: 100%;
+    float: left;
+	margin-right:20px;
+	margin-bottom: 8px;
+}
+ 
+#right-3 {
+    width: 100%;
+    float: left;
+}
+.clearfix:after {
+    content:"\0020";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+ 
+.clearfix {
+    display:block;
+}
+	
+	#req-f7-poli-insured{
+		margin-bottom: -30px;
+	}
+	#req-f7-poli-email{
+		margin-bottom: -30px;
+	}
+	#req-f7-poli-hl-email{
+		margin-bottom: -10px;
+		margin-top: -30px;
+	}
+	#req-f7-poli-name{
+		margin-bottom: -30px;
+	}
+	#req-f7-poli-attention{
+		margin-bottom: -30px;
+	}
+	
+	
+}
+
+-------------------------------- CSS End For Mobile-------------------------
+
+

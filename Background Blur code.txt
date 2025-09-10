@@ -1,0 +1,12 @@
+selector{
+     
+    backdrop-filter:  blur(
+    5px); 
+    -webkit-backdrop-filter:  blur(5px); 
+}
+
+selector{
+     
+    backdrop-filter: saturate(180%) blur(20px); 
+    -webkit-backdrop-filter: saturate(180%) blur(20px); 
+}

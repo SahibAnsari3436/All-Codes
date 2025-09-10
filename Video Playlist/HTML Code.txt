@@ -1,0 +1,30 @@
+Video Playlist code:
+
+
+<div class="video-playlist-container">
+    <div class="main-video">
+        <iframe id="main-video" src="https://www.youtube.com/embed/4cMNaBhrbQc" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-thumbnails">
+        <button class="nav-arrow left-arrow" onclick="moveLeft()">&#10094;</button>
+        <div class="thumbnails-wrapper">
+            <div class="thumbnail" data-video="https://www.youtube.com/embed/4eY7WC4R424">
+                <img src="https://jacksonvillecarnival.com/wp-content/uploads/2024/07/vd-thumb-1.webp" alt="Thumbnail 1">
+            </div>
+            <div class="thumbnail" data-video="https://www.youtube.com/embed/8nK5RXVrxr8">
+                <img src="https://jacksonvillecarnival.com/wp-content/uploads/2024/07/vd-thumb-2.webp" alt="Thumbnail 2">
+            </div>
+            <div class="thumbnail" data-video="https://www.youtube.com/embed/_zdWwTde5js">
+                <img src="https://jacksonvillecarnival.com/wp-content/uploads/2024/07/vd-thumb-3.webp" alt="Thumbnail 3">
+            </div>
+            <div class="thumbnail" data-video="https://www.youtube.com/embed/ScyHash3Eug">
+                <img src="https://jacksonvillecarnival.com/wp-content/uploads/2024/07/vd-thumb-4.webp" alt="Thumbnail 4">
+            </div>
+            <div class="thumbnail" data-video="https://www.youtube.com/embed/4cMNaBhrbQc">
+                <img src="https://jacksonvillecarnival.com/wp-content/uploads/2024/07/vd-thumb-6.webp" alt="Thumbnail 5">
+            </div>
+            
+        </div>
+        <button class="nav-arrow right-arrow" onclick="moveRight()">&#10095;</button>
+    </div>
+</div>

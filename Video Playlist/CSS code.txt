@@ -1,0 +1,80 @@
+.video-playlist-container {
+            max-width: 100%;
+            margin: auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-video {
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            padding-bottom: 40.25% !important; /* 16:9 aspect ratio */
+            height: 0;
+        }
+        .main-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-thumbnails {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .thumbnails-wrapper {
+            display: flex;
+            overflow: hidden;
+            width: calc(100% - 80px);
+            
+        }
+        .thumbnail {
+            flex: 0 0 auto;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .thumbnail img {
+            width: 158px;
+            height: auto;
+            display: block;
+        }
+        .nav-arrow {
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            user-select: none;
+            color: #fff;
+            width: 45px;
+            height: 45px;
+            border-radius: 45px;
+            background-color: #530F5C;
+        }
+        @media (max-width: 768px) {
+            .thumbnail img {
+                width: 135px;
+            }
+            .nav-arrow {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .thumbnail img {
+                width: 90px;
+            }
+            .nav-arrow {
+                font-size: 1rem;
+            }
+            .main-video {
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            padding-bottom: 60.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+        }

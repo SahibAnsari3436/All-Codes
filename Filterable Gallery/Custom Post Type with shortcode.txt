@@ -1,0 +1,108 @@
+// Register the Custom Post Type
+
+function create_gallery_post_type() {
+    register_post_type('gallery',
+        array(
+            'labels' => array(
+                'name' => __('Galleries'),
+                'singular_name' => __('Gallery')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'supports' => array('title'),
+            'rewrite' => array('slug' => 'gallery'),
+            'show_in_rest' => true,
+        )
+    );
+}
+add_action('init', 'create_gallery_post_type');
+
+
+// Add a new column to the Project Gallery post list
+add_filter('manage_project_gallery_posts_columns', 'add_shortcode_column');
+function add_shortcode_column($columns) {
+    $columns['shortcode'] = 'Shortcode';
+    return $columns;
+}
+
+// Show the shortcode value in the column
+add_action('manage_project_gallery_posts_custom_column', 'show_shortcode_column_content', 10, 2);
+function show_shortcode_column_content($column, $post_id) {
+    if ($column === 'shortcode') {
+        echo '<code>[dynamic_gallery id="' . $post_id . '"]</code>';
+    }
+}
+
+
+
+
+// Adding shortcode features
+
+function render_dynamic_gallery_shortcode($atts) {
+    $atts = shortcode_atts(array(
+        'id' => ''
+    ), $atts);
+
+    $post_id = intval($atts['id']);
+
+    if (!$post_id) return '<p>No gallery selected.</p>';
+
+    ob_start();
+
+    $images = get_field('gallery_images', $post_id);
+
+    if ($images) {
+        echo '<div class="gallery-filters">';
+        echo '<button data-filter="all" class="filter-btn active">All</button>';
+
+        $all_categories = [];
+
+        foreach ($images as $img) {
+            if (!in_array($img['category'], $all_categories)) {
+                $all_categories[] = $img['category'];
+            }
+        }
+
+        foreach ($all_categories as $cat) {
+            echo '<button class="filter-btn" data-filter="' . esc_attr($cat) . '">' . esc_html($cat) . '</button>';
+        }
+
+        echo '</div><div class="gallery-grid">';
+
+        foreach ($images as $img) {
+            $category = esc_attr($img['category']);
+            $title = esc_html($img['title']);
+            $link = !empty($img['link']) ? esc_url($img['link']) : '';
+            $lightbox = strtolower($img['lightbox']) === 'yes';
+
+            $image_id = is_array($img['image']) ? $img['image']['ID'] : $img['image'];
+            $img_url = wp_get_attachment_image_url($image_id, 'large');
+            $thumb = wp_get_attachment_image($image_id, 'medium', false, array('class' => 'gallery-image'));
+
+            ?>
+            <div class="gallery-item" data-category="<?php echo $category; ?>">
+                <div class="gallery-image-wrapper">
+                    <?php echo $thumb ? $thumb : '<p>No image available.</p>'; ?>
+                    <div class="gallery-overlay">
+						<div class="gallery-icons">
+                        <?php if ($lightbox && $img_url): ?>
+                            <a href="<?php echo esc_url($img_url); ?>" class="lightbox-icon" title="Open in lightbox">🔍</a>
+                        <?php endif; ?>
+                        <?php if (!empty($link)): ?>
+                            <a href="<?php echo $link; ?>" class="link-icon" title="Visit link" target="_blank">🔗</a>
+                        <?php endif; ?>
+						</div>
+						<?php if (!empty($title)) echo '<div class="gallery-hover-title">'. $title .'</div>'; ?>
+                    </div>
+                </div>
+                
+            </div>
+            <?php
+        }
+
+        echo '</div>';
+    }
+
+    return ob_get_clean();
+}
+add_shortcode('dynamic_gallery', 'render_dynamic_gallery_shortcode');

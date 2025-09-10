@@ -1,0 +1,4 @@
+.wpcf7 input::placeholder,
+.wpcf7 textarea::placeholder {
+	color: #000 !important;
+}

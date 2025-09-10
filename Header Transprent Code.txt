@@ -1,0 +1,31 @@
+The custom css code
+
+Put this part on your main section
+
+selector.elementor-sticky--effects{
+background-color: rgba(0,0,0,0.5)!important
+}
+
+selector{
+transition: background-color 1s ease !important;
+}
+
+selector.elementor-sticky--effects >.elementor-container{
+min-height: 70px;
+}
+
+selector > .elementor-container{
+transition: min-height 1s ease !important;
+}
+Put this part on your logo image (don’t forget to give the logo a class of “logo”)
+
+.logo img {
+max-width: 140px;
+height: auto;
+transition: all 0.5s ease;
+}
+
+.elementor-sticky--effects .logo img {
+max-width: 120px;
+height: auto;
+}

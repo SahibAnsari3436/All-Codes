@@ -1,0 +1,28 @@
+Astra Prior to the 3.0 Header Builder
+
+
+/*Make Header Sticky - for Astra prior to 3.0*/
+.main-header-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/*Adjust Content Padding*/
+.site-content {
+    padding-top: 75px;
+}
+
+/*Adjust Content Padding for Mobile*/
+@media (max-width: 800px) {
+    .site-content {
+        padding-top: 175px;
+    }
+}
+
+/*Adjust Content Padding for Mobile*/
+@media (max-width: 650px) {
+    .site-content {
+        padding-top: 200px;
+    }
+}

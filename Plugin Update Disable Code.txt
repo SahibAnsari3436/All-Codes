@@ -1,0 +1,17 @@
+
+/* Disable Specific Plugin Updates Code for functions.php */
+
+
+function disable_plugin_updates( $value ) {
+  unset( $value->response['blocksy-companion/blocksy-companion.php'] );
+
+	unset( $value->response['akismet/akismet.php'] );
+  return $value;
+}
+add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
+
+
+
+/* Disable All Plugins Update Code for functions.php */
+
+add_filter( 'site_transient_update_plugins', '__return_false' );

@@ -1,0 +1,7 @@
+function change_add_to_cart_text( $translated_text, $text, $domain ) {
+    if ( $text === 'Add to cart' && $domain === 'woocommerce' ) {
+        $translated_text = 'SALE!';
+    }
+    return $translated_text;
+}
+add_filter( 'gettext', 'change_add_to_cart_text', 20, 3 );

@@ -1,0 +1,50 @@
+ 
+Video Icon Glow Effect :
+
+::before
+----------------------------------
+
+.jeg-elementor-kit.jkit-video-button .jkit-video-popup-btn.glow-enable:after, .jeg-elementor-kit.jkit-video-button .jkit-video-popup-btn.glow-enable:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--jkit-element-bg-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 currentColor;
+    -webkit-animation: jkit-ripple 3s infinite;
+    animation: jkit-ripple 3s infinite;
+    opacity: .6;
+    z-index: -1;
+}
+
+
+---------------------------------
+
+.jeg-elementor-kit.jkit-video-button 
+.jkit-video-popup-btn.glow-enable:after
+{
+
+
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--jkit-element-bg-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 currentColor;
+    -webkit-animation: jkit-ripple 3s infinite;
+    animation: jkit-ripple 3s infinite;
+    opacity: .6;
+    z-index: -1;
+}
+
+
+.jeg-elementor-kit.jkit-video-button .jkit-video-popup-btn.glow-enable:after {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}

@@ -1,0 +1,8 @@
+
+For Bottom Scroll Bar Hide  --------------  
+
+
+ html, body{
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }

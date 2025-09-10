@@ -1,0 +1,37 @@
+DELIVERABLES IN MAINTENANCE-
+
+
+1. Administration Email Address => Done.
+2. Theme Update => Done.
+3. Plugin Update => Done.
+4. Database Cleanup => Done.
+5. Junk Cleanup => Done.
+6. Duplicate and Unused Media Cleanup => Done
+7. Spam Entries Removal => Done.
+8. Unused/Draft/Trashed Page Removal => Done. 
+9. Unused/Draft/Trashed Post Removal => Done. 
+10. Unused/Draft/Trashed Custom Post Removal => Done. 
+11. Unused Theme Removal => Done.
+12. Unused Plugin Removal => Done.
+13. Recaptcha Connectivity on forms(if not) 
+14. Security Scan  
+15. Security Setup (if not done)  
+16. Technical SEO Optimisation 
+17. Image and other media Compression => Done.
+18. Form deliverability testing => Done.
+19. Mobile site testing for all functionality 
+20. Tablet site testing for all functionality 
+21. Website Backup (old and auto setup for upcoming) => Done.
+
+
+
+marigold.aster.hair@gmail.com
+
+
+
+
+info@skinetics.com
+
+shabuddin3436@gmail.com
+
+info@quiatcompanies.com

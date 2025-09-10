@@ -1,0 +1,46 @@
+
+-----------------------------------
+For Elementor PRO:
+-----------------------------------
+
+
+
+selector .elementor-icon-list-item {
+   align-items: baseline;
+}
+selector .elementor-icon-list-item i {
+    padding-top:5px;
+}
+
+
+
+-------------------------------------------
+For Elementor Free (with HTML element)
+-------------------------------------------
+
+
+
+<style>
+
+#myiconlist .elementor-icon-list-item {
+   align-items: baseline;
+}
+#myiconlist.elementor-icon-list-item i {
+    padding-top:5px;
+}
+
+</style>
+
+
+
+-------------------------------------------
+For customizer of Theme (Addtional CSS )
+-------------------------------------------
+
+#myiconlist .elementor-icon-list-item {
+   align-items: baseline;
+}
+#myiconlist.elementor-icon-list-item i {
+    padding-top:5px;
+Icon List Icon alignment.txt
+Displaying Icon List Icon alignment.txt.

@@ -1,0 +1,51 @@
+<!-- Working Process Strat  ---->
+
+<section class="content-block">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 wow fadeIn  animated animated" style="visibility: visible;">
+                        <div class="title-block"> <img src="http://webzent.co.uk/wbztstaging/wp-content/uploads/2023/10/title-icon.png" alt="Image">
+                            <h6>Working Process</h6>
+                            <h2 class="wow zoomIn   animated" style="visibility: visible;">Before start your project <br>you must have a look our process</h2> </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeIn  animated animated" style="visibility: visible;">
+                        <div class="icon-content-box">
+                            <figure> <img src="http://webzent.co.uk/wbztstaging/wp-content/uploads/2023/10/icon01.png" alt="Image"> </figure>
+                            <h5>Analysis</h5>
+                            <p>Once the analysis is complete, the step of designing takes over, which is basically building the architecture of the project. This step helps remove possible flaws by setting a standard and attempting to stick to it </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeIn  animated animated" style="visibility: visible;">
+                        <div class="icon-content-box">
+                            <figure> <img src="http://webzent.co.uk/wbztstaging/wp-content/uploads/2023/10/icon02.png" alt="Image"> </figure>
+                            <h5>Design</h5>
+                            <p>Once the analysis is complete, the step of designing takes over, which is basically building the architecture of the project. This step helps remove possible flaws by setting a standard and attempting to stick to it </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeIn  animated animated" style="visibility: visible;">
+                        <div class="icon-content-box">
+                            <figure> <img src="http://webzent.co.uk/wbztstaging/wp-content/uploads/2023/10/icon03.png" alt="Image"> </figure>
+                            <h5>Development</h5>
+                            <p>The actual task of developing the software starts here with data recording going on in the background. Once the software is developed. </p>
+                        </div>
+                    </div>
+                    <div class="inner-spacing"></div>
+                    <div class="col-lg-3 col-md-4 wow fadeIn  animated animated" style="visibility: visible;">
+                        <div class="icon-content-box">
+                            <figure> <img src="http://webzent.co.uk/wbztstaging/wp-content/uploads/2023/10/icon04.png" alt="Image"> </figure>
+                            <h5>Testing</h5>
+                            <p>The testing stage assesses the software for errors and documents bugs if there are any. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 wow fadeIn  animated animated" style="visibility: visible;">
+                        <div class="icon-content-box">
+                            <figure> <img src="http://webzent.co.uk/wbztstaging/wp-content/uploads/2023/10/icon05.png" alt="Image"> </figure>
+                            <h5>Maintenance</h5>
+                            <p>Once the software passes through all the stages without any issues, it is to undergo a maintenance process where it will be maintained and upgraded from time to time to adapt to changes. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Working Process End  ---->

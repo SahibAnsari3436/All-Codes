@@ -1,0 +1,9 @@
+
+
+
+<style>
+    #set-icon .elementor-icon{
+        animation: fa-spin 1.2s infinite linear;
+    }
+    
+</style>

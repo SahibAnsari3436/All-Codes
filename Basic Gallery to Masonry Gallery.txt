@@ -1,0 +1,24 @@
+<style>
+    .gallery-icon img{
+    width: 100%;
+    margin: 5px !important;
+}
+@media (min-width: 1024px) {
+    #gallery-1 {
+      column-count: 4;
+      column-gap: 10px;
+    }
+}
+@media (min-width:361px) and (max-width:1024px) {
+    #gallery-1 {
+      column-count: 3;
+      column-gap: 10px;      
+    }  
+}
+@media (max-width:360px) {
+    #gallery-1 {
+      column-count: 1;
+      column-gap: 0px;      
+    }  
+}
+</style>

@@ -1,0 +1,22 @@
+
+Header Fixed Code.
+
+/*---- Header Fixed ----- */
+
+#nav-header {
+    position: fixed !important;
+    margin-bottom: 0px !important;
+    top: 0px !important;
+    width: 100% !important;
+    left: 0px !important;
+    background-color:#fff
+}
+
+html {
+  --top-spacing: 90px;
+  scroll-padding-top: var(--top-spacing);
+}
+body {
+  margin: var(--top-spacing) auto; }
+
+/*---- Header Fixed End----- */

@@ -1,0 +1,66 @@
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Responsive grid */
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  
+  transition: transform 0.3s;
+}
+
+.gallery-title {
+  margin-top: 8px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  font-family: "Manrope", Sans-serif;
+}
+
+
+/* Lock scroll when lightbox is active */
+/* body.lightbox-open,
+html.lightbox-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  position: fixed;
+  width: 100%;
+}
+ */
+/* Force lightbox image to center vertically */
+.lb-outerContainer,
+.lb-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100%;
+}
+
+/* Fix image display size */
+.lb-image {
+  max-height: 90vh !important;
+  object-fit: contain;
+  margin: auto;
+}

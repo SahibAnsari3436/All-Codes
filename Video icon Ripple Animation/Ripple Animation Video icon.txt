@@ -1,0 +1,49 @@
+<style>
+#ripple{
+  width:108px;
+  height:108px;
+  background:#00000000;
+  text-align:center;
+  font-weight:bold;
+  font-size:32px;
+  font-family:arial;
+  line-height:180px;
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+#ripple:before{
+  position:absolute;
+  content:'';
+  border:5px solid #ffffff;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  border-radius:50%;
+  animation:animate 2s linear infinite;
+}
+
+#ripple:after{
+  position:absolute;
+  content:'';
+  border:5px solid #ffffff;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  border-radius:50%;
+  animation:animate 2s 1s linear infinite;
+}
+
+@keyframes animate{
+  100%{
+    transform:scale(2);
+    opacity:0
+  }
+}
+
+
+</style>

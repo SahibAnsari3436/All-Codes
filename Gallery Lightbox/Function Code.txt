@@ -1,0 +1,96 @@
+// Register the Custom Post Type for Gallery
+
+function register_gallery_cpt() {
+    register_post_type('gallery_item', [
+        'label' => 'Gallery Items',
+        'public' => true,
+        'has_archive' => true,
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'menu_icon' => 'dashicons-format-gallery',
+    ]);
+}
+add_action('init', 'register_gallery_cpt');
+
+// Create Gallery Shortcode with Lightbox
+
+
+function all_gallery_items_shortcode() {
+    ob_start();
+
+    $args = [
+        'post_type' => 'gallery_item', // Your custom post type
+        'posts_per_page' => -1,
+    ];
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()):
+        ?>
+        <div class="gallery-grid">
+            <?php while ($query->have_posts()): $query->the_post();
+                $images = get_field('gallery');
+                if ($images && is_array($images)):
+                    $gallery_id = 'gallery-' . get_the_ID();
+                    $first_image = $images[0];
+                    ?>
+                    <div class="gallery-item">
+                        <!-- Main visible image -->
+                        <a href="<?php echo esc_url($first_image['url']); ?>" data-lightbox="<?php echo esc_attr($gallery_id); ?>" data-title="<?php echo esc_attr(get_the_title()); ?>">
+                            <img src="<?php echo esc_url($first_image['sizes']['medium']); ?>" alt="<?php echo esc_attr($first_image['alt']); ?>">
+                        </a>
+                        <div class="gallery-title"><?php the_title(); ?></div>
+
+                        <!-- Hidden anchor tags for lightbox group -->
+                        <?php
+                        foreach ($images as $index => $image):
+                            if ($index === 0) continue; // skip first (already shown)
+                            ?>
+                            <a href="<?php echo esc_url($image['url']); ?>" data-lightbox="<?php echo esc_attr($gallery_id); ?>" data-title="<?php echo esc_attr(get_the_title()); ?>" class="hidden-lightbox-link"></a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            <?php endwhile; ?>
+        </div>
+        <?php
+        wp_reset_postdata();
+    endif;
+
+    return ob_get_clean();
+}
+add_shortcode('all_gallery_items', 'all_gallery_items_shortcode');
+
+
+
+// Add Lightbox & CSS
+
+function enqueue_lightbox_assets() {
+    wp_enqueue_style('lightbox-css', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css');
+    wp_enqueue_script('lightbox-js', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_lightbox_assets');
+
+
+add_action('wp_footer', function () {
+    ?>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            lightbox.option({
+                disableScrolling: true // this should work, but fallback below ensures it
+            });
+
+            const html = document.querySelector('html');
+            const body = document.querySelector('body');
+
+            // Manual fallback to lock scrolling
+            document.addEventListener("lightbox-start", function () {
+                html.classList.add("lightbox-open");
+                body.classList.add("lightbox-open");
+            });
+
+            document.addEventListener("lightbox-end", function () {
+                html.classList.remove("lightbox-open");
+                body.classList.remove("lightbox-open");
+            });
+        });
+    </script>
+    <?php
+});

@@ -1,0 +1,51 @@
+<div id="ac-wrapper" style='display:none'>
+    <div id="popup">
+        <center>
+            <div class="inner-content">
+             
+		     <!--h3>Seasons Special!</h3-->
+		      <div class="pop-content">
+             <!--h2>Now Offering 25% off on Hydra Facial</h2-->
+			 <img src="<?php echo get_site_url();?>/wp-content/uploads/2020/11/Pop_up.jpg" alt="Snow" style="width:100%">
+		     <!--input type="submit" class="close_popup" name="submit" value="Close" onClick="PopUp('hide')" />		  
+             <a target="blank" href="https://essenzbeauty.com/product/hydra-facial/"><button class="btn buy-button">Buy Now</button></a-->
+             
+             <button class="close_popup" value="Close" name="submit" onclick="PopUp('hide')"><a href="javascript:void(0)">Close</a></button>
+             <button class="close_popup buynow_txt"><a target="blank" href="https://essenzbeauty.com/product/hydra-facial/">Buy Now</a></button>
+				  
+				    <h2 class="hdng">Please Choose Which location you are in :</h2>
+				  <div class="mainpopadd">					
+					 <div class="dallsdd">
+					  
+			<p style="font-size:12px;font-weight: 500;">
+				
+					<b>Address:-</b> 4043 E Trinity Mills Rd, Suite# 106, Dallas, TX 75287	 </p>
+					<a style="background-color:#070707; color:#f7f7f7;" class="dalbt" href="https://wordpress-659985-2333889.cloudwaysapps.com/services-for-dallas/" title="">Dallas</a>
+				  </div>  
+					   <div class="ontardd">
+					 	 <p style="font-size:12px;font-weight: 500;"><b>Address:-</b> 2000 Simcoe St N, Oshawa, Ontario L1G 0C5, Canada	 </p>
+						<a style="background-color:#070707; color:#fcfcfc;" class="onbt" href="https://wordpress-659985-2333889.cloudwaysapps.com/ontario/" title="">Ontario</a>
+				  </div>
+				  </div>
+            </div>
+              </div>
+        </center>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+	function PopUp(hideOrshow) {
+    if (hideOrshow == 'hide') document.getElementById('ac-wrapper').style.display = "none";
+    else document.getElementById('ac-wrapper').removeAttribute('style');
+}
+window.onload = function () {
+	if (sessionStorage.getItem('firstVisit') != '1'){
+		setTimeout(function () {
+			PopUp('show');
+		}, 1000);
+		sessionStorage.setItem('firstVisit', '1');
+	}
+}  
+</script>

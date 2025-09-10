@@ -1,0 +1,86 @@
+
+When Popup is Active Everythink is Clickable
+
+
+.pum-overlay{
+ cursor: pointer !important;
+ visibility: hidden !important;
+}
+
+
+.pum-theme-6317
+{
+	background-color:black !important;
+}
+
+
+------------------------------------------------------------------------
+
+When Popup is Active you can't scroll
+
+html {
+    overflow-y: hidden !important;
+}
+
+body,html
+{
+    height:100%; 
+}
+#popup
+{
+    height:100%;
+    width:0px;
+    float:right;
+    display: inline;
+    top:0;
+    right: 0;
+    position: fixed;
+    background-color: #eee;
+    z-index: 100;
+}
+
+
+
+<script>
+	function DisableScrollbar()
+{
+    // exit if page can't scroll
+    if($(document).height() ==  $('body').height()) return;
+
+    var old_width = $(document).width();
+    var new_width = old_width;
+
+    // ID's \ class to change
+    var items_to_change = "#Banner, #Footer, #Content";
+
+    $('body').css('overflow-y','hidden');
+
+    // get new width
+    new_width = $(document).width()
+
+    // update width of items to their old one(one with the scrollbar visible)
+    $(items_to_change).width(old_width);
+
+    // make the placeholder the same width the scrollbar was
+    $("#popup").show().width(new_width-old_width);
+
+    // and float the items to the other side.
+    $(items_to_change).css("float", "left");
+
+}
+
+function EnableScrollbar()
+{
+    // exit if page can't scroll
+    if ($(document).height() ==  $('body').height()) return;   
+
+    // remove the placeholder, then bring back the scrollbar
+    $("#popup").fadeOut(function(){          
+        $('body').css('overflow-y','auto');
+    });
+}
+	
+	
+	
+</script>
+		

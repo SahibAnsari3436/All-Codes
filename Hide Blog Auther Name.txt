@@ -1,0 +1,4 @@
+function remove_author_name() {
+    return '';
+}
+add_filter('the_author', 'remove_author_name');

@@ -1,0 +1,40 @@
+Here is the classes to use in each field:
+
+YouTube Video Link: https://www.youtube.com/watch?v=dm84PQ87ktM
+
+Only for Date Picker: walcf7-datepicker
+Only for Time Picker: walcf7-timepicker
+For both Date and Time Picker: walcf7-datetimepicker
+How to use?
+*  Unlimited website usage
+*  Light / Dark Theme
+*  Disable past date selection
+*  Disable today if necessary
+*  Specify weekend and disable if necessary
+*  Disable specific date selection
+*  Specify holiday and Disable if necessary
+*  Maximum allowed date selection
+*  24hr / 12hr time format
+*  Hide/Show AM/PM
+*  Change time step or interval
+*  Provide Max and Min selectable time
+*  Speed up website. Load script only at selected page
+
+----------------------------------------------CODE
+
+Contact Form 7 
+
+Time Picker Code:-
+
+[text* book-time class:walcf7-timepicker placeholder "Time Picker"]
+
+Date Picker Code:-
+
+[text* book-date class:walcf7-datepicker placeholder "Date Picker"]
+
+
+Date and Time Picker Code:-
+
+[text* book-date-time class: walcf7-datetimepicker placeholder "Date and Time Picker"]
+
+----------------------------------------------CODE

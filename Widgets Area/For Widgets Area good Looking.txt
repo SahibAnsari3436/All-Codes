@@ -1,0 +1,7 @@
+Video Link:-  https://www.youtube.com/watch?v=Ce29zOhY1tQ 
+
+//disable the brand new WordPress widget editor
+
+add_filter( 'use_widgets_block_editor', '__return_false' );
+
+

@@ -1,0 +1,50 @@
+
+ Slide Anything Slider JavaScript--------------
+
+
+
+
+<script type='text/javascript'>
+	document.addEventListener('DOMContentLoaded', function() {
+		jQuery('#slider_1163').owlCarousel({
+			items : 1,
+			smartSpeed : 200,
+			autoplay : true,
+			autoplayTimeout : 5000,
+			autoplayHoverPause : true,
+			smartSpeed : 200,
+			fluidSpeed : 200,
+			autoplaySpeed : 200,
+			navSpeed : 200,
+			dotsSpeed : 200,
+			loop : true,
+			nav : true,
+			navText : ['Previous','Next'],
+			dots : true,
+			responsiveRefreshRate : 200,
+			slideBy : 1,
+			mergeFit : true,
+			autoHeight : false,
+			mouseDrag : false,
+			touchDrag : true
+		});
+		jQuery('#slider_1163').css('visibility', 'visible');
+		var owl_goto = jQuery('#slider_1163');
+		jQuery('.slider_1163_goto1').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 0);
+		});
+		jQuery('.slider_1163_goto2').click(function(event){
+			owl_goto.trigger('to.owl.carousel', 1);
+		});
+		var resize_1163 = jQuery('.owl-carousel');
+		resize_1163.on('initialized.owl.carousel', function(e) {
+			if (typeof(Event) === 'function') {
+				window.dispatchEvent(new Event('resize'));
+			} else {
+				var evt = window.document.createEvent('UIEvents');
+				evt.initUIEvent('resize', true, false, window, 0);
+				window.dispatchEvent(evt);
+			}
+		});
+	});
+</script>

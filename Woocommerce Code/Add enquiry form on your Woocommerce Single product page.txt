@@ -1,0 +1,26 @@
+// Adds a enquiry form on your Woocommerce Single product page
+ 
+add_action( 'woocommerce_single_product_summary', 'enquiry_form', 30 );
+function enquiry_form() {
+echo '<button type="submit" id="trigger_cf" class="button alt">Send us your enquiry</button>';
+echo '<div id="product_inq" style="display:none">';
+echo do_shortcode('');
+echo '</div>';
+}
+ 
+add_action( 'woocommerce_single_product_summary', 'enquiry_form_1', 40);
+function enquiry_form_1() {
+  ?>
+    <script type="text/javascript">
+        jQuery('#trigger_cf').on('click', function(){
+        if ( jQuery(this).text() == 'Send us your enquiry' ) {
+                    jQuery('#product_inq').css("display","block");
+            jQuery("#trigger_cf").html('Close');
+        } else {
+            jQuery('#product_inq').hide();
+            jQuery("#trigger_cf").html('Send us your enquiry');
+        }
+        });
+    </script>
+    <?php    
+}

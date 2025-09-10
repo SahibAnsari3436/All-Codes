@@ -1,0 +1,23 @@
+<style>
+.our-athletes{
+  height: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
+  
+}
+
+.our-athletes::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+.our-athletes::-webkit-scrollbar-thumb {
+  background-color: #84D429 !important; 
+}
+
+.our-athletes::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+
+</style>

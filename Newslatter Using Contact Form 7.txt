@@ -1,0 +1,234 @@
+Video URL: youtube.com/watch?v=EgpQLN8D9C0
+
+Newslatter Using Contact Form 7
+
+--- HTML Code Snippet For Newsletter Form -----
+
+
+<div class="news-letter-wrapper">
+    <div id="news-letter-container" class="email-submit">
+            <div class="column1">
+              [email* your-email placeholder "✉ Enter Your Email"]
+            </div>
+            <div class="column2">
+                [submit "GET IT NOW!"]
+            </div>
+    </div>
+</div> 
+
+
+
+--- CSS Code Snippet For Newsletter Form ----
+
+<! ––Google font CDN Link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+<! ––CSS For CF7 Newsletter Form-->
+
+<style>
+/*CF7 spinner*/
+.news-letter-container .wpcf7-spinner {
+    display:none !important;
+}
+
+
+/*--form wrapper--*/
+.news-letter-wrapper{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    margin-bottom: 0 !important;
+    gap:0px !important;
+}
+
+
+/*--form main container--*/
+#news-letter-container{
+  display:flex !important;
+  flex-direction: row !important;
+  max-width:70vw !important;
+  width:100% !important;
+  gap:0px !important;
+  justify-content:center !important;
+}
+
+
+
+/*--form background, border & content area--*/
+.news-letter-container .wpcf7 {
+    border: 0px solid red !important;
+    padding: 0px 0px 0px 0px !important;
+    background: transparent !important;
+}
+
+
+
+/*--form placeholder text--*/
+.news-letter-container .wpcf7 input::placeholder{
+font-family: 'Poppins', sans-serif !important;
+font-size:20px !important;
+color: #B6B8BA !important;
+}
+
+
+
+/*--Form email input field--*/
+.news-letter-container .wpcf7 input[type="email"] {
+    width: 100% !important;
+height:60px !important;
+    padding: 10px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size:20px !important;
+    line-height:1.2 !important;
+    background-color:  white !important;
+    color:#5E5E5F !important;
+    border: 0px solid red !important;
+    border-radius: 5px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.1) !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    margin:0 !important;
+}
+
+
+
+/*--Form Submit button--*/
+.news-letter-container .wpcf7 input[type="submit"] {
+    display: block !important;
+    font-family: 'Poppins', sans-serif !important;
+  height: 60px !important;
+  text-align:center !important;
+  color: #ffffff !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  background: #EC5B53 !important;
+  box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.1) !important;
+  padding: 12px 10px 12px 10px !important;
+  border: 0px solid red  !important;
+  border-radius: 5px !important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  width: fit-content !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  line-height: 1.0 !important;
+  margin:0 !important;
+  transition: all 0.4s ease 0s !important;
+}
+
+
+
+/*-Submit button Hover effect-*/
+.news-letter-container .wpcf7 input:hover[type="submit"] {
+    background:  #FF0000 !important;
+}
+
+
+
+/* Highlight input currently in use */
+.news-letter-container .wpcf7 input[type="email"]:focus {
+  background-color: white !important;
+  border: 1px solid red !important;
+}
+
+
+
+/*Shrinking for Tablet devices*/
+@media (min-width: 401px) and (max-width: 768px) {
+.news-letter-container .wpcf7 input[type="submit"],  .news-letter-container .wpcf7 input[type="email"], .news-letter-container .wpcf7 input::placeholder{
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  height:50px !important;
+  }
+}
+
+
+
+/*Shrinking for the large Mobile devices*/
+@media (max-width: 400px) {
+.news-letter-container .wpcf7 input[type="submit"],  .news-letter-container .wpcf7 input[type="email"], .news-letter-container .wpcf7 input::placeholder{
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    height:40px !important;
+}
+ 
+ 
+    .news-letter-container .wpcf7 input[type="submit"]{
+  border-radius: 0px !important;
+  border-bottom-right-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  width: 70vw !important;
+    }
+
+
+    .news-letter-container .wpcf7 input[type="email"]{
+    border-radius: 0px !important;
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    width: 70vw !important;
+}
+
+
+  .news-letter-container .wpcf7 input::placeholder{
+text-align:center;
+}
+/*--form main container--*/
+#news-letter-container{
+    display:flex !important;
+    flex-direction: column !important;
+    max-width:70vw !important;
+    width:100% !important;
+    gap:0px !important;
+  justify-content:center !important;
+  align-items:center;
+  }
+}
+
+
+
+/*--Not valid tool tip--*/
+.news-letter-container span.wpcf7-not-valid-tip{
+    text-shadow: none !important;
+    font-size: 12px !important;
+    color:#ff0000 !important;
+    background: transparent !important;
+    padding: 0px !important;
+    display:none  !important;
+}
+
+
+
+/*--Invalid Response--*/
+.news-letter-container div.wpcf7 form.invalid .wpcf7-response-output,
+.news-letter-container .wpcf7 form.unaccepted .wpcf7-response-output {
+    text-shadow: none !important;
+    border: 0px !important;
+    padding: 3px !important;
+    color: #D8000C !important;
+    text-align: left !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    background-color: #FFBABA !important;
+    /*display: none !important; -----Remove this line of code, If you don't want to display error message------*/
+}
+
+
+
+/*--Success Response--*/
+.news-letter-container div.wpcf7 form.sent .wpcf7-response-output {
+    text-align: left !important;
+    text-shadow: none !important;
+    padding: 3px !important;
+    border:0px !important;
+    font-size: 12px !important;
+    background: #DFF2BF !important;
+    border-color: #DFF2BF !important;
+    color: #4F8A10 !important;
+    margin: 0 !important;
+}
+</style>

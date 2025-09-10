@@ -1,0 +1,261 @@
+ 
+
+------------------------------ANIMATION CSS-------------------------------------------------------------
+
+
+-------------3D Button with hover and clickable Animation
+
+
+
+.front {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+  .pushable:hover .front {
+    transform: translateY(-6px);
+  }
+  
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+  
+  .pushable {
+  background: hsl(340deg 100% 32%);
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+}
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-4px);
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+
+<button class="pushable">
+  <span class="front">
+    Push me
+  </span>
+</button>
+
+
+-------------3D Button with clickable Animation
+
+  .pushable {
+    background: hsl(340deg 100% 32%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  .front {
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(345deg 100% 47%);
+    color: white;
+    transform: translateY(-6px);
+  }
+
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+
+
+
+
+  <button class="pushable">
+    <span class="front">
+      Push me
+    </span>
+  </button>
+
+
+-------------3D Button
+
+  a {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #2E1966;
+    border: none;
+    padding:15px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 2px 0px #000, 0px 8px 2px 0px #DFEBF6;
+    transition: all 0.3s;
+}
+
+  a:hover {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #24A8EC;
+    border: none;
+    padding:15px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 2px 0px #1874a3, 0px 8px 2px 0px #DFEBF6;
+    transition: all 0.3s;
+}
+
+-------------FOR MOVING BACKGROUND COLOR BOTTOM TO TOP	
+
+  #home-service .flex_column{
+	
+      border-style: solid!important;
+      border-color: black !important;
+      color: black !important;
+      padding: 50px !important;
+      background-size: 200% 200% !important;
+      background-image: linear-gradient(to top, #a72424 50%, transparent 50%) !important;
+      -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+      -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+      -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+      -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+      transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+
+}
+
+
+
+  #home-service .flex_column:hover{
+	
+      color: white !important;
+      border-color: #A72424 !important;
+      background-image: linear-gradient(to top, #A72424 51%, transparent 50%) !important;
+      background-position: 0 100% !important;
+      -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+      -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+      -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+      -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;
+      transition: background-position 300ms, color 300ms ease, border-color 300ms ease !important;  
+	
+	
+	
+}
+
+-------------FOR COLOR 
+
+#top #menu-item-search.menu-item-search-dropdown>a{
+	animation:lala 2s infinite alternate;
+}
+
+@keyframes lala {
+	0% {color: #1F1F1F;}
+	50% {color: #EE5476;}
+	100% {color: #56C9E8;}
+}
+
+
+
+
+------------------FOR MOVING TOP AND BOTTOM
+
+
+#conakash .flex_column{
+	animation:sahib 1s infinite alternate;
+}
+
+@keyframes sahib {
+	0% {top: 0px;}
+	100% {top:20px;}
+}
+
+
+
+-----------------FOR ROTATING OBJECTS
+
+
+
+#about-sec-two .flex_column{
+	
+	animation:spin 20s linear infinite;
+	z-index:-1;
+}
+
+@keyframes spin{
+	100%{-webkit-transform: rotate(360deg);}
+	}
+
+
+------------------FOR TYPING TEXT
+
+
+
+#about-sec-one h2{
+	width: 0ch;
+	overflow:hidden;
+	white-space:nowrap;
+	animation: typing 6s steps(8) infinite alternate;
+	border-right: 3px solid #ED5477;
+}
+
+@keyframes typing{
+	0% {width: 0ch;}
+	50% {width: 8ch;}
+}
+
+
+----------------------FOR BUTTON BORDER CSS
+
+
+#home-sec-3 .avia_iconbox_title:before{
+	position:absolute;
+	content: '';
+	height:0;
+	width:0;
+	border: 2px solid transparent;
+	bottom:0;
+	left:0;
+	box-sizing: border-box;
+}
+
+
+#home-sec-3 .avia_iconbox_title:after{
+	position:absolute;
+	content: '';
+	height:0;
+	width:0;
+	border: 2px solid transparent;
+	top:0;
+	right:0;
+	box-sizing: border-box;
+	
+}
+
+
+#home-sec-3 .avia_iconbox_title:hover:before{
+	height:50px;
+	width:160px;
+	border: 3px solid #1F62B7;
+	border-bottom: none;
+	border-right: none;
+	transition: height 0.5s linear, width 0.3s linear 0.5s;
+	
+}
+
+#home-sec-3 .avia_iconbox_title:hover:after{
+	height:50px;
+	width:160px;
+	border: 3px solid #1F62B7;
+	border-top: none;
+	border-left: none;
+	transition: height 0.5s linear, width 0.3s linear 0.5s;
+}
+
+
+
