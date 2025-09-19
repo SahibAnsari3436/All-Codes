@@ -1,0 +1,25 @@
+1. 🔄 Main WooCommerce Template Functions
+
+These functions dynamically output WooCommerce content:
+
+
+1. woocommerce_content()	
+Displays main WooCommerce content (shop, product, cart, checkout).	
+<?php woocommerce_content(); ?>
+
+
+2. woocommerce_get_template_part()	
+Loads WooCommerce template parts.	
+<?php wc_get_template_part( 'content', 'product' ); ?>
+
+3. woocommerce_breadcrumb()	
+Displays breadcrumbs.	
+<?php woocommerce_breadcrumb(); ?>
+
+4. woocommerce_output_content_wrapper()	
+Adds opening wrapper for WooCommerce pages.	
+<?php woocommerce_output_content_wrapper(); ?>
+
+5. woocommerce_output_content_wrapper_end()	
+Closes the wrapper.	
+<?php woocommerce_output_content_wrapper_end(); ?>

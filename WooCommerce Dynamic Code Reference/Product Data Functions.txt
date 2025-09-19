@@ -1,0 +1,60 @@
+2. 📦 Product Data Functions
+
+Use these inside loops or custom queries.
+
+
+1. the_title()	Product title.	
+<?php the_title(); ?>
+
+2. the_permalink()	Product link.	
+<a href="<?php the_permalink(); ?>">View</a>
+
+3. woocommerce_template_single_price()	
+Displays product price.	
+<?php woocommerce_template_single_price(); ?>
+
+4. woocommerce_template_single_add_to_cart()	
+Displays add-to-cart button.	
+<?php woocommerce_template_single_add_to_cart(); ?>
+
+5. woocommerce_template_single_meta()	
+Displays product meta (SKU, categories, tags).	
+<?php woocommerce_template_single_meta(); ?>
+
+6. woocommerce_template_single_excerpt()	
+Displays short description.	
+<?php woocommerce_template_single_excerpt(); ?>
+
+7. woocommerce_template_single_rating()	
+Displays product rating.	
+<?php woocommerce_template_single_rating(); ?>
+
+8. woocommerce_show_product_sale_flash()	
+Displays "Sale!" badge.	
+<?php woocommerce_show_product_sale_flash(); ?>
+
+
+9. woocommerce_show_product_images()	
+Displays product images.	
+<?php woocommerce_show_product_images(); ?>
+
+10. woocommerce_template_loop_product_title()	
+Displays product title in loops.	
+<?php woocommerce_template_loop_product_title(); ?>
+
+11.woocommerce_template_loop_price()	
+Displays product price in loops.	
+<?php woocommerce_template_loop_price(); ?>
+
+12. woocommerce_template_loop_add_to_cart()	
+Displays add-to-cart button in loops.	
+<?php woocommerce_template_loop_add_to_cart(); ?>
+
+13. woocommerce_template_loop_rating()	
+Displays rating stars.	
+<?php woocommerce_template_loop_rating(); ?>
+
+14. woocommerce_template_loop_product_thumbnail()	
+Displays thumbnail image.	
+<?php woocommerce_template_loop_product_thumbnail(); ?>
+

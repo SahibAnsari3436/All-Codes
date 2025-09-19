@@ -1,0 +1,18 @@
+4. 📂 Display Posts by Category
+
+<?php
+$args = array(
+    'category_name' => 'news', // category slug
+    'posts_per_page' => 3,
+);
+$cat_posts = new WP_Query($args);
+
+if ($cat_posts->have_posts()) :
+    while ($cat_posts->have_posts()) : $cat_posts->the_post(); ?>
+        <h3><?php the_title(); ?></h3>
+        <?php the_excerpt(); ?>
+    <?php endwhile;
+endif;
+
+wp_reset_postdata();
+?>

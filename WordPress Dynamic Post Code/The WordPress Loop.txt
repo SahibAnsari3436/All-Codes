@@ -1,0 +1,12 @@
+1. 🔄 The WordPress Loop
+
+The Loop is the core way to display posts dynamically.
+
+<?php if ( have_posts() ) : ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+        <h2><?php the_title(); ?></h2>
+        <div><?php the_content(); ?></div>
+    <?php endwhile; ?>
+<?php else : ?>
+    <p><?php esc_html_e( 'Sorry, no posts found.' ); ?></p>
+<?php endif; ?>

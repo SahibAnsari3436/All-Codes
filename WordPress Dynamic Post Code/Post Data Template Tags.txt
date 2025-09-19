@@ -1,0 +1,54 @@
+2. 📝 Post Data Template Tags
+
+These functions are used inside the loop to display post fields dynamically:
+
+Function	Purpose	Example
+
+1. the_ID()	
+Displays the post ID.	
+<?php the_ID(); ?>
+
+2. the_title()	
+Displays the post title.
+<?php the_title(); ?>
+
+3. the_permalink()
+Displays the post URL.
+<a href="<?php the_permalink(); ?>">Read More</a>
+
+4. the_content()	
+Displays full post content.	
+<?php the_content(); ?>
+
+5. the_excerpt()	
+Displays post excerpt.	
+<?php the_excerpt(); ?>
+
+6. the_author()	
+Displays post author name.	
+<?php the_author(); ?>
+
+7. the_date()	
+Displays post publish date.	
+<?php the_date(); ?>
+
+8.the_time()	
+Displays post publish time.	
+<?php the_time('F j, Y g:i a'); ?>
+
+
+9. the_post_thumbnail()	
+Displays featured image.	
+<?php the_post_thumbnail('medium'); ?>
+
+10. the_category()	
+Displays categories.	
+<?php the_category(', '); ?>
+
+11. the_tags()	
+Displays tags.	
+<?php the_tags(); ?>
+
+12. comments_template()	
+Loads comments template.
+<?php comments_template(); ?>

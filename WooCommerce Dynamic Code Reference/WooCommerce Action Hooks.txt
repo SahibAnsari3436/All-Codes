@@ -1,0 +1,32 @@
+8. 🪝 WooCommerce Action Hooks
+
+
+1. woocommerce_before_main_content	
+Runs before shop content.
+
+2. woocommerce_after_main_content	
+Runs after shop content.
+
+3. woocommerce_before_shop_loop	
+Before product loop.
+
+4. woocommerce_after_shop_loop	
+After product loop.
+
+5. woocommerce_before_single_product	
+Before single product summary.
+
+6. woocommerce_after_single_product	
+After single product summary.
+
+7. woocommerce_before_cart	
+Before cart content.
+
+8. woocommerce_after_cart	
+After cart content.
+
+9. woocommerce_before_checkout_form	
+Before checkout form.
+
+10.woocommerce_after_checkout_form	
+After checkout form.

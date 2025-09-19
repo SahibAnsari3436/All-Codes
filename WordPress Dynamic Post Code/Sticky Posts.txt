@@ -1,0 +1,17 @@
+9. 📌 Sticky Posts
+
+<?php
+$sticky = get_option('sticky_posts');
+$args = array(
+    'post__in' => $sticky,
+    'posts_per_page' => 1
+);
+$sticky_query = new WP_Query($args);
+
+if ($sticky_query->have_posts()) :
+    while ($sticky_query->have_posts()) : $sticky_query->the_post();
+        the_title();
+        the_excerpt();
+    endwhile;
+endif;
+?>

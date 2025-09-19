@@ -1,0 +1,23 @@
+3. 🎯 Custom Queries (WP_Query)
+
+If you need more control, use WP_Query:
+
+
+<?php
+$args = array(
+    'post_type'      => 'post',
+    'posts_per_page' => 5,
+    'orderby'        => 'date',
+    'order'          => 'DESC',
+);
+$query = new WP_Query( $args );
+
+if ( $query->have_posts() ) :
+    while ( $query->have_posts() ) : $query->the_post(); ?>
+        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <?php the_excerpt(); ?>
+    <?php endwhile;
+endif;
+
+wp_reset_postdata();
+?>

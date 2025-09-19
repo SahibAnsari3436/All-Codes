@@ -1,0 +1,18 @@
+5. 👤 Account & User Functions
+
+
+1. wc_get_account_endpoint_url()	
+
+Get account page endpoint URL.	
+<?php echo wc_get_account_endpoint_url('orders'); ?>
+
+
+2. wc_get_page_id('myaccount')	
+Get My Account page ID.	
+<?php echo get_permalink( wc_get_page_id('myaccount') ); ?>
+
+
+3. wc_get_customer_last_order()	
+Get customer’s last order.	
+<?php $order = wc_get_customer_last_order(get_current_user_id()); ?>
+

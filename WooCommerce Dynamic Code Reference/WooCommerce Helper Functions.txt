@@ -1,0 +1,35 @@
+7. 🎯 WooCommerce Helper Functions
+
+
+1. wc_get_product($id)	Get product object.	
+$product = wc_get_product(123);
+
+
+2. $product->get_price()	Get product price.	
+echo $product->get_price();
+
+
+3. $product->get_regular_price()	Get regular price.	
+echo $product->get_regular_price();
+
+
+4. $product->get_sale_price()	Get sale price.	
+echo $product->get_sale_price();
+
+
+5. $product->get_sku()	Get SKU.	
+echo $product->get_sku();
+
+
+6. $product->get_stock_quantity()	Get stock qty.	
+echo $product->get_stock_quantity();
+
+
+7. $product->is_in_stock()	
+Check stock status.	
+if($product->is_in_stock()) echo "In Stock";
+
+
+8. $product->get_image()	Get featured image.	
+echo $product->get_image('thumbnail');
+

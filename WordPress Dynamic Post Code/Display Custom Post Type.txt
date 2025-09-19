@@ -1,0 +1,18 @@
+10. 🗂️ Display Custom Post Type
+
+<?php
+$args = array(
+    'post_type'      => 'books', // your custom post type
+    'posts_per_page' => 5,
+);
+$books = new WP_Query($args);
+
+if ($books->have_posts()) :
+    while ($books->have_posts()) : $books->the_post(); ?>
+        <h2><?php the_title(); ?></h2>
+        <?php the_excerpt(); ?>
+    <?php endwhile;
+endif;
+
+wp_reset_postdata();
+?>

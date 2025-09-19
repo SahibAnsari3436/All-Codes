@@ -1,0 +1,17 @@
+6. 📦 Order Functions
+
+1. wc_get_order( $order_id )	Get order object.
+2. $order->get_items()	Get order items.
+3. $order->get_billing_first_name()	Get billing first name.
+4. $order->get_total()	Get order total price.
+5. $order->get_status()	Get order status.
+
+
+📝 Display Order Items
+
+<?php
+$order = wc_get_order(123); // order ID
+foreach ($order->get_items() as $item_id => $item) {
+    echo $item->get_name() . ' - Qty: ' . $item->get_quantity();
+}
+?>

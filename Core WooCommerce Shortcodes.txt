@@ -1,0 +1,185 @@
+🛒 Core WooCommerce Shortcodes
+
+
+1. [woocommerce_cart]
+
+Displays the shopping cart page.
+
+Used to show the cart with products added by customers.
+
+2. [woocommerce_checkout]
+
+Displays the checkout page.
+
+Used for processing orders and payments.
+
+3. [woocommerce_my_account]
+
+Displays the My Account area.
+
+Includes login, registration, account details, orders, downloads, and more.
+
+Attributes:
+
+order_count → Number of recent orders to display. Example: [woocommerce_my_account order_count="5"].
+
+4. [woocommerce_order_tracking]
+
+Displays a form for customers to check the status of their order.
+
+Requires Order ID and Email Address.
+
+📦 Product Display Shortcodes
+5. [products]
+
+Main shortcode to display products.
+
+Highly flexible with attributes.
+
+Key attributes:
+
+ids → Specific product IDs.
+
+skus → Specific product SKUs.
+
+limit → Number of products to display.
+
+columns → Number of columns.
+
+orderby → Sorting method (date, title, price, rand).
+
+order → Sort order (ASC, DESC).
+
+category → Show products from specific categories.
+
+attribute + terms → Show products with specific attributes.
+
+on_sale="true" → Only show discounted products.
+
+best_selling="true" → Only show best-sellers.
+
+top_rated="true" → Only show top-rated products.
+
+Example:
+[products limit="4" columns="4" category="shoes" orderby="price" order="ASC"]
+
+6. [product]
+
+Displays a single product by ID or SKU.
+
+Attributes:
+
+id → Product ID
+
+sku → Product SKU
+
+Example: [product id="123"]
+
+7. [product_page]
+
+Displays a single product page layout.
+
+Attributes:
+
+id or sku
+
+Example: [product_page id="123"]
+
+8. [product_category]
+
+Displays products from a specific category.
+
+Attributes:
+
+category → Slug of the category.
+
+limit, columns, orderby, order
+
+Example:
+[product_category category="tshirts" limit="6" columns="3"]
+
+9. [product_categories]
+
+Displays multiple product categories instead of products.
+
+Attributes:
+
+number → Number of categories to display.
+
+columns → Columns layout.
+
+orderby → Sort method (name, id, slug, count).
+
+order → ASC / DESC.
+
+ids → Display specific category IDs.
+
+hide_empty="0" → Show empty categories.
+
+Example:
+[product_categories number="12" columns="4" hide_empty="0"]
+
+10. [recent_products]
+
+Shows recently added products.
+
+Attributes:
+
+per_page → Number of products.
+
+columns → Columns layout.
+
+orderby, order.
+
+Example:
+[recent_products per_page="8" columns="4"]
+
+11. [featured_products]
+
+Shows products marked as Featured in WooCommerce.
+
+Attributes: same as [recent_products].
+
+12. [sale_products]
+
+Shows products on sale (discounted).
+
+Attributes: same as [recent_products].
+
+13. [best_selling_products]
+
+Shows best-selling products based on sales data.
+
+Attributes: same as [recent_products].
+
+14. [top_rated_products]
+
+Shows highest-rated products (based on reviews).
+
+Attributes: same as [recent_products].
+
+📑 Other Useful Shortcodes
+15. [add_to_cart id=""]
+
+Displays a button to add a specific product to cart (by product ID).
+
+Attributes:
+
+id → Product ID.
+
+style="border:0;" → Button style customization.
+
+sku → Product SKU.
+
+Example:
+[add_to_cart id="123"]
+
+16. [add_to_cart_url id=""]
+
+Returns the URL to add a specific product to the cart.
+
+Useful for creating custom buttons/links.
+
+17. [woocommerce_logout]
+
+Creates a Logout link for logged-in customers.

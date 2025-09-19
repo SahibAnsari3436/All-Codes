@@ -1,0 +1,38 @@
+4. 🛍️ Cart & Checkout Functions
+
+1. woocommerce_mini_cart()	
+Displays mini-cart contents.	
+<?php woocommerce_mini_cart(); ?>
+
+
+2. wc_get_cart_url()	Get cart page URL.	
+<a href="<?php echo wc_get_cart_url(); ?>">Cart</a>
+
+
+3. wc_get_checkout_url()	Get checkout page URL.	
+<a href="<?php echo wc_get_checkout_url(); ?>">Checkout</a>
+
+
+4. WC()->cart->get_cart_total()	
+Get total cart value.	
+<?php echo WC()->cart->get_cart_total(); ?>
+
+
+5. WC()->cart->get_cart_contents_count()	
+Number of items in cart.	
+<?php echo WC()->cart->get_cart_contents_count(); ?>
+
+
+6. WC()->cart->get_cart()	Get cart items array.	
+Loop through items → see example below.
+
+
+
+🛒 Display Cart Items in Header
+
+
+<?php foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+    $_product = $cart_item['data'];
+    echo $_product->get_name() . ' x ' . $cart_item['quantity'];
+} ?>
+
